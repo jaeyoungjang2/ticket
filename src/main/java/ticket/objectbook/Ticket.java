@@ -1,4 +1,4 @@
-package ticket;
+package ticket.objectbook;
 
 public class Ticket {
     private Long fee;

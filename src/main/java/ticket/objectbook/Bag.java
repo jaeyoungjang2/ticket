@@ -1,4 +1,4 @@
-package ticket;
+package ticket.objectbook;
 
 public class Bag {
     private Long amount;
@@ -36,5 +36,16 @@ public class Bag {
 
     public void plusAmount(Long fee) {
         amount += fee;
+    }
+
+    public Long hold() {
+        if (hasInvitation()) {
+            setTicket(ticket);
+            return 0L;
+        } else {
+            minusAmount(ticket.getFee());
+            setTicket(ticket);
+            return ticket.getFee();
+        }
     }
 }
