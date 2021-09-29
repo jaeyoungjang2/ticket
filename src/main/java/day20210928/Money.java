@@ -7,12 +7,16 @@ public class Money {
 
     public Money() {}
 
-    protected Money(int amount) {
+    public Money(int amount) {
         this.amount = amount;
     }
 
     public void spend(int ticketPrice) {
         amount -= ticketPrice;
+    }
+
+    public void earn(int ticketPrice) {
+        amount += ticketPrice;
     }
 
     @Override
